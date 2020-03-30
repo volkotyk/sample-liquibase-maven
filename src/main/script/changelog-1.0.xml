@@ -6,7 +6,7 @@
     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
 	<changeSet author="atmaram" id="2.0">
-		<createTable tableName="person">
+		<createTable tableName="Employee">
 			<column name="id" type="int">
 				<constraints primaryKey="true" />
 			</column>
@@ -14,10 +14,10 @@
 			<column name="last_name" type="varchar(50)" />
 			<column name="age" type="int" />
 		</createTable>
-		<addAutoIncrement tableName="person" columnName="id" columnDataType="int" />
+		<!--<addAutoIncrement tableName="Employee" columnName="id" columnDataType="int" />
 		<rollback>
-			<dropTable tableName="person" />
-		</rollback>
+			<dropTable tableName="Employee" />
+		</rollback> -->
 	</changeSet>
 
 </databaseChangeLog> 
