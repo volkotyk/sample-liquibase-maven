@@ -7,9 +7,7 @@
 
 	<changeSet author="atmaram" id="2.0">
 		<createTable tableName="Employe">
-			<column name="id" type="int">
-				<constraints primaryKey="true" />
-			</column>
+			<column name="id" type="int" />
 			<column name="first_name" type="varchar(20)" />
 			<column name="last_name" type="varchar(50)" />
 			<column name="age" type="int" />
