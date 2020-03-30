@@ -6,7 +6,7 @@
     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
 	<changeSet author="atmaram" id="2.0">
-		<createTable tableName="Employee">
+		<createTable tableName="Employee1">
 			<column name="id" type="int">
 				<constraints primaryKey="true" />
 			</column>
