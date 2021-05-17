@@ -5,14 +5,14 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 	
-	<changeSet author="atmaram" id="2.1">
-		<addColumn tableName="person">
+	<changeSet author="vkotyk" id="2.1">
+		<addColumn tableName="Employeee">
 			<column name="pesel" type="varchar(11)">
 				<constraints unique="true" />
 			</column>
 		</addColumn>
 		<rollback>
-			<dropColumn tableName="person" columnName="pesel" />
+			<dropColumn tableName="Employeee" columnName="pesel" />
 		</rollback>
 	</changeSet>
 	

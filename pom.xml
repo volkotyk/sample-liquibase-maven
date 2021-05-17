@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>pl.liquibase.samples</groupId>
-	<artifactId>sample-liquibase-maven</artifactId>
+	<groupId>com.fortna.liquibase.maven</groupId>
+	<artifactId>liquibase-maven</artifactId>
 	<version>1.0-SNAPSHOT</version>
 
 	<properties>
@@ -14,7 +14,7 @@
 			<plugin>
 				<groupId>org.liquibase</groupId>
 				<artifactId>liquibase-maven-plugin</artifactId>
-				<version>3.5.3</version>
+				<version>4.3.5</version>
 				<configuration>
 					<propertyFile>src/main/resources/liquibase.properties</propertyFile>
 				</configuration>
@@ -22,7 +22,10 @@
 					<execution>
 						<phase>process-resources</phase>
 						<goals>
+							<goal>status</goal>
+							<goal>diff</goal>
 							<goal>update</goal>
+							<goal>rollbackOneUpdate</goal>
 						</goals>
 					</execution>
 				</executions>
