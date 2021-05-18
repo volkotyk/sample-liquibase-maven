@@ -1,10 +1,20 @@
-FROM maven:3.8.1-openjdk-8
+FROM adoptopenjdk/openjdk11:jdk-11.0.11_9-alpine-slim
 
 ENV HOME=/home/usr/app
 
 RUN mkdir -p $HOME
 WORKDIR $HOME
 ADD . $HOME
+
+ENV MAVEN_VERSION 3.5.4
+ENV MAVEN_HOME /usr/lib/mvn
+ENV PATH $MAVEN_HOME/bin:$PATH
+
+RUN wget http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz && \
+tar -zxvf apache-maven-$MAVEN_VERSION-bin.tar.gz && \
+rm apache-maven-$MAVEN_VERSION-bin.tar.gz && \
+mv apache-maven-$MAVEN_VERSION /usr/lib/mvn
+
 
 RUN ["/usr/local/bin/mvn-entrypoint.sh", "mvn", "verify", "clean", "--fail-never"]
 RUN ["mvn", "package"]
