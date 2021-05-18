@@ -1,4 +1,4 @@
-FROM maven:3.8.1-openjdk-8-slim
+FROM maven:3.8.1-openjdk-8
 
 ENV HOME=/home/usr/app
 
