@@ -7,7 +7,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean install'
+                sh 'mvn package'
+                sh 'cat src/main/resources/db.changelog-NEW1.xml'
             }
         }
     }
