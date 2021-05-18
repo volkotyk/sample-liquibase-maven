@@ -1,4 +1,4 @@
-FROM maven:3.8.1-openjdk-11-slim as Liquibase
+FROM maven:3.8.1-jdk-11-slim
 
 ENV HOME=/home/usr/app
 
