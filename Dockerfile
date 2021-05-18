@@ -8,4 +8,3 @@ ADD . $HOME
 
 RUN ["/usr/local/bin/mvn-entrypoint.sh", "mvn", "verify", "clean", "--fail-never"]
 RUN ["mvn", "package"]
-RUN cat src/main/resources/db.changelog-NEW1.xm
