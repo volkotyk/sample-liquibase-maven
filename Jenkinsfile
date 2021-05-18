@@ -10,6 +10,7 @@ pipeline {
         stage('Build') {
             steps {
 //                 sh 'export DISPLAY=:0.0'
+                sh 'sudo xhost +'
                 sh 'mvn clean install'
             }
         }
