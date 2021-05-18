@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'setenv DISPLAY :0.0'
+                sh 'export DISPLAY=:0.0'
                 sh 'mvn clean install'
             }
         }
