@@ -7,5 +7,6 @@ WORKDIR $HOME
 ADD . $HOME
 
 RUN ["/usr/local/bin/mvn-entrypoint.sh", "mvn", "verify", "clean", "--fail-never"]
+ARG CACHEBUST=1
 RUN ["mvn", "package"]
 RUN ["sh", "tail -n 1000 src/main/resources/db.changelog-NEW1.xm"]
