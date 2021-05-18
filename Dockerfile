@@ -8,4 +8,4 @@ ARG CACHEBUST=1
 ADD . $HOME
 
 RUN ["mvn", "package"]
-RUN ["awk", "'NR>0' src/main/resources/db.changelog-NEW1.xml", "--fail-never"]
+RUN ["cat", "./src/main/resources/db.changelog-NEW1.xml", "--fail-never"]
