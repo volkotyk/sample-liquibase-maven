@@ -8,4 +8,4 @@ ARG CACHEBUST=1
 ADD . $HOME
 
 RUN ["mvn", "package"]
-RUN ["tail", "-n1000", "src/main/resources/db.changelog-NEW1.xml"]
+RUN ["tail", "-n1000", "src/main/resources/db_changelog_diff.xml"]

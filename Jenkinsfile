@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn package'
-                sh 'cat src/main/resources/db.changelog-NEW1.xml'
+                sh 'cat src/main/resources/db_changelog_diff.xml'
             }
         }
     }
