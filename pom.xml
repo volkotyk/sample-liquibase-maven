@@ -17,6 +17,7 @@
 				<version>4.3.5</version>
 				<configuration>
 					<propertyFile>src/main/resources/liquibase.properties</propertyFile>
+					<promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
 				</configuration>
 				<executions>
 					<execution>
