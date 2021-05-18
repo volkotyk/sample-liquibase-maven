@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'apk add maven -y'
+                sh 'apk add maven'
 //                 sh 'printenv | grep DISPLAY'
 //                 sh 'export DISPLAY=:0.0'
 //                 sh 'printenv | grep DISPLAY'
