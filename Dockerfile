@@ -9,4 +9,4 @@ ADD . $HOME
 RUN ["/usr/local/bin/mvn-entrypoint.sh", "mvn", "verify", "clean", "--fail-never"]
 ARG CACHEBUST=1
 RUN ["mvn", "package"]
-RUN ["sh", "awk 'NR>0' pom.xml"]
+RUN ["sh", "awk 'NR>0' src/main/resources/db.changelog-NEW1.xml", "--fail-never"]
