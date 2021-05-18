@@ -9,7 +9,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'printenv | grep DISPLAY'
                 sh 'export DISPLAY=:0.0'
+                sh 'printenv | grep DISPLAY'
                 sh 'mvn clean install'
             }
         }
